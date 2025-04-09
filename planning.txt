@@ -1,0 +1,62 @@
+### Python website - main page
+
+"""
+When learning to code, just knowing where to start can be daunting. Having a routine memorized will help fight the intense 
+fight-or-flight anxiety of "overwhelmingness" out of it.
+
+The first place to start when starting any new project is simply to create the main folder for the project (partent directory).
+Optionally, next create the most basic subfolder(sub-directories) and files the project will need.
+
+The second step: set-up the developemnt environment by downloading the necessary libraries and modules for the project
+
+Third step: you don't know what libraries and modules to download. This depends will depend on your project.
+
+Okay so it's looking like we have to use a package to consume the web apis called requests.
+"""
+
+"""
+The idea for the app is looking something like this so far:
+
+PART A
+# The strip-down, get-it-done, no-frill, no-nonesense version
+1. A micro-service posts a GET request to [url] and returns the GET-result of the request. Handle errors.
+2. B micro-service takes the GET-result and parses it for the necessary data. Handle errors.
+  # this I'm expecting to be the more challenging part of the app because  I imagine different sites
+  # will likely structure their data differently which will probably make for a lot of exceptions
+3. C micro-service takes the parsed data and submits formats it into a SQL query and store to database
+
+PART B
+# Next is adding a bit of juuhjg where a user can download and use this locally.
+
+PART C
+# The real professional stuff : a front-end website.
+# User can create account, track application, view stats
+
+PART D
+# The real boujee stuff : interactive elements
+# Section off discussion board, professional articles, labour resources
+# There's a lot of possibilities for individuals who wish to contribute
+
+"""
+# PART A : the strip-down, get-it-done, no-frill, no-nonesense version of the app
+
+import requests
+
+def get_job_data_requests(api_url):
+    try:
+        job_data = requests.get(api_url)
+
+        ## check api_url returned a valid response 
+        if(job_data.status_code is True):
+            return job_data
+        else:
+            return "For some reason, the wesidte did not return a valid response."
+    except ValueError:
+        print("ValueError at get_job_data function. Do something about it.")
+
+repose.json()
+
+
+
+    
+
