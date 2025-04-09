@@ -15,7 +15,8 @@
 
 # The idea for now: 
   # Manually* enter relevant information into schema, which will be stored in a database
+  # *Evantually, a microservice should scrape the webpage for relevant information for the database
   # Information from the database can then be used to propegate varying templates 
   # Add micro-services that uses these information to generate varying stats
-  *Evantually, a microservice should scrape the webpage for relevant information for the database
+  
 
